@@ -1235,6 +1235,30 @@ client.on('message', message => {
 }
 });
 
+
+  client.on('message', async message => {
+  if(message.content.startsWith(prefix + "تقديم")) {
+  await  message.channel.send(`ليش تبي تقدم `)
+  await  message.channel.send(`وش اسمك`)
+  await  message.channel.send(`كم عمرك`)
+  await  message.channel.send(`من اي بلد`)
+  await  message.channel.send(`عندك خبره؟`)
+  await  message.channel.send(`وش خبرتك`)
+  await  message.channel.send(`?متأكد من التقديم`)
+    let filter = m => m.author.id === message.author.id
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+ 
+              message.channel.send(`الرجاء انتضار الرد من قبل الاداره`)
+                client.channels.get("564481369984729094").send(`${message.author.username}'s sug => ${text}`)
+ 
+              })
+            }
+          })
+
+
 client.on('message', message => {
 	var prefix = "-";
 if (message.content.startsWith(prefix + 'tag')) {
