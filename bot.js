@@ -1239,11 +1239,30 @@ client.on('message', message => {
   client.on('message', async message => {
   if(message.content.startsWith(prefix + "تقديم")) {
   await  message.channel.send(`ليش تبي تقدم `)
+let filter = m => m.author.id === message.author.id
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+      var text = '';
+let filter = m => m.author.id === message.author.id
   await  message.channel.send(`وش اسمك`)
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+      var text = '';
+let filter = m => m.author.id === message.author.id
   await  message.channel.send(`كم عمرك`)
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+      var text = '';
+let filter = m => m.author.id === message.author.id
   await  message.channel.send(`من اي بلد`)
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+      var text = '';
+let filter = m => m.author.id === message.author.id
   await  message.channel.send(`عندك خبره؟`)
+let filter = m => m.author.id === message.author.id
+      var text = '';
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
   await  message.channel.send(`وش خبرتك`)
+let filter = m => m.author.id === message.author.id
+      var text = '';
+let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
   await  message.channel.send(`?متأكد من التقديم`)
     let filter = m => m.author.id === message.author.id
       var text = '';
